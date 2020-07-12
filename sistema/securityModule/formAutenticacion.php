@@ -28,7 +28,7 @@ class formAutenticacion
           
           </div>
           <input name="bntAceptar" type="submit" id="bntAceptar" value="Aceptar" class="button">
-          <p>¿Se olvido su contraseña? <a class="link" href="./securityModule/indexRecordarClave.php">Recordar contraseña </a></p>
+          <p>¿Se olvido su contraseña? <a class="link" href="./securityModule/indexRecordarClave.php">Recordar clave</a></p>
       </div>
 		</form>
 		</body>
