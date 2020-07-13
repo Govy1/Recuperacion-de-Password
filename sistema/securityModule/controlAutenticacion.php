@@ -21,7 +21,7 @@ class controlAutenticacion
 			$objMenu = new formMenuPrincipal;
 			$objDetalle = new detalleUsuario;
 			$privilegios = $objDetalle -> obtenerPrivilegios($login);
-			//session_start();
+			session_start();
 			$_SESSION['login'] = $login;			
 			$objMenu -> formMenuPrincipalShow($privilegios);
 		}
