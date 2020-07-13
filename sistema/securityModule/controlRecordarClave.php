@@ -58,7 +58,9 @@ class controlRecordarClave{
     }
 
     public function generarCodigo(){
-        $codigo = mt_rand(10000,99999);
+        //$codigo = mt_rand(10000,99999);
+        $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $codigo = substr(str_shuffle($permitted_chars), 0, 5);
         return $codigo;
     }
 
