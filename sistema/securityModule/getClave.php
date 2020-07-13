@@ -1,7 +1,7 @@
 <?php
 
-$newPass = $_POST['newPass'];
-$repeatPass = $_POST['repeatPass'];
+$newPass = $_POST['txtNewPass'];
+$repeatPass = $_POST['txtRepeatPass'];
 
 if(strlen($newPass) >= 4){
     if ($newPass == $repeatPass) {
@@ -20,6 +20,5 @@ else{
 	$objMensaje = new formMensaje;
 	$objMensaje -> formMensajeShow("La contraseña no cumple con la cantidad de caracteres requeridas","<a href='../index.php'>ir al inicio</a>");
 }
-
 
 ?>

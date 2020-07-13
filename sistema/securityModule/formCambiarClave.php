@@ -20,11 +20,11 @@ class formCambiarClave{
     <h1>Cambiar Contraseña</h1>
     <div class="input-contenedor">
     <i class="fas fa-key icon"></i>
-         <input type="password" placeholder="ingrese Password" name='newPass'>
+         <input type="password" placeholder="ingrese Password" name='txtNewPass'>
     </div>     
     <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-         <input type="password" placeholder="Confirme Contraseña" name='repeatPass'>
+         <input type="password" placeholder="Confirme Contraseña" name='txtRepeatPass'>
     </div>
          <input type="submit" value="Grabar" class="button" name="btnGrabar">
      </div>

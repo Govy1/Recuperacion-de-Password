@@ -27,9 +27,6 @@ class formVerificarCodigo
         <input type="submit" value="enviar" class="button" name="enviar">
     </div>
     </form>
-    <form action="get" method="post">
-        <input type="submit" value="enviar otra vez" class="button">
-    </form>
 </body>
 </html>
         <?

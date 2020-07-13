@@ -1,7 +1,7 @@
 <?php
 class controlRecordarClave{
 
-    public function recordarLogin($user){
+    public function verificarLogin($user){
         include_once("../modelos/usuario.php");
         $objUsuario =  new usuario;
         $respuesta = $objUsuario -> verificarUser($user);
@@ -29,8 +29,10 @@ class controlRecordarClave{
 
     }
 
-    public function verificarCodigo($codigoOficial, $codigoVerificar){
-        if($codigoOficial == $codigoVerificar){
+    public function verificarCodigo($codigoOficial){
+        session_start();
+        $codigoEnviado = $_SESSION['codigo'];   
+        if($codigoOficial == $codigoEnviado){
             include_once("./formCambiarClave.php"); 
             $objCambiarClave = new formCambiarClave;
             $objCambiarClave -> formCambiarClaveShow();
@@ -61,9 +63,13 @@ class controlRecordarClave{
     }
 
     public function enviarCodigo($codigo, $correo){
+        date_default_timezone_set('America/Lima');
+        $hoy = getdate();
         $asunto = "RECORDAR CLAVE DE ACCESO";
         $carta .= "Para poder continuar con el proceso de RECORDAR\n";
-        $carta .= "CLAVE debe ingresar el siguiente codigo de verificacion\n";
+        $carta .= "CLAVE debe ingresar el siguiente codigo de verificacion.\n";
+        $carta .= "Realizada el ".$hoy[mday]."/".$hoy[mon]."/".$hoy[year];
+        $carta .= " a las ".$hoy[hours].":".$hoy[minutes].":".$hoy[seconds]."\n";
         $carta .= "CODIGO:\t\t$codigo";
         if(mail($correo, $asunto, $carta)){
             return (1);

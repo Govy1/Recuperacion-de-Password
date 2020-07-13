@@ -10,6 +10,6 @@ if(strlen($user) < 4)
 else {
     include_once("controlRecordarClave.php");
     $objRecordarClave = new controlRecordarClave;
-    $objRecordarClave -> recordarLogin($user);
+    $objRecordarClave -> verificarLogin($user);
 }
 ?>
