@@ -1,3 +1,3 @@
 Recuperacion de Contraseña
-2
-23
+
+Prueba de conexion mediante protocolo SSH
